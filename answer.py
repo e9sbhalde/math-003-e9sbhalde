@@ -1,7 +1,8 @@
+"""This line import the math module"""
 import math
 
-
 def answer(number):
+    """ This function returns  the largest prime factor of the number 600,851,475,143?"""
     mylist = []
     list_to_check = []
     prime = []

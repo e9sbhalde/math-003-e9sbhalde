@@ -1,19 +1,21 @@
+"""This line import the math module"""
 import math
 
 
-def solver(value):
+def solver(number):
+    """Write a function in python that returns the largest prime factor of a given number."""
     mylist = []
     list_to_check = []
     prime = []
 
-    num = math.sqrt(value)
+    num = math.sqrt(number)
     num = int(num)
     for i in range(2, num + 1):
-        if value % i == 0:
+        if number % i == 0:
             mylist.append(i)
 
     for i in mylist:
-        new_fact = value / i
+        new_fact = number / i
         new_fact = int(new_fact)
         list_to_check.append(new_fact)
 
@@ -27,10 +29,8 @@ def solver(value):
                 break
         if count == 0:
             prime.append(i)
-
     prime.sort()
     return prime[-1]
 
-if __name__ == "__main__": 
-    value = int(input("Enter the Number : "))
-    print(solver(value))
+if __name__ == "__main__":
+    print(solver(100))
